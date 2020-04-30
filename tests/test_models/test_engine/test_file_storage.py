@@ -121,10 +121,11 @@ class TestDBStorage_new(unittest.TestCase):
         """Test method to retrieve one object"""
         storage = FileStorage()
         state = State(name="Arizona")
-        nobjs = len(storage._FileStorage__objects)
-        self.assertEqual(nobjs, storage.count())    def test_count(self):
-        """Test method to count the number of objects in storage"""
-        storage = FileStorage()
         state.save()
         self.assertEqual(state, storage.get("State", state.id))
 
+    def test_count(self):
+        """Test method to count the number of objects in storage"""
+        storage = FileStorage()
+        nobjs = len(storage._FileStorage__objects)
+        self.assertEqual(nobjs, storage.count())
