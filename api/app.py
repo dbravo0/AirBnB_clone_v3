@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""api"""
+"""app"""
 import os
 from flask import Flask, Blueprint, jsonify
 from api.v1.views import app_views
