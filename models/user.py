@@ -28,7 +28,7 @@ class User(BaseModel, Base):
 
     def __init__(self, *args, **kwargs):
         """
-        Instantiate user with encoded passwor
+        Instantiate user with encoded password
         """
         super().__init__(*args, **kwargs)
         pass_encode = self.password.encode()
